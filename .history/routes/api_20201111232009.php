@@ -21,12 +21,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 //Flight
 Route::get('/flight', 'App\Http\Controllers\FlightController@all');
-
-//Train
-Route::get('/train', 'App\Http\Controllers\TrainController@all');
-
-//Hotel
-Route::get('/hotel', 'App\Http\Controllers\HotelController@all');
-
-//Rental
-Route::get('/rental', 'App\Http\Controllers\RentalController@all');

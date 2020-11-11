@@ -15,13 +15,6 @@ class CreateFlightsTable extends Migration
     {
         Schema::create('flights', function (Blueprint $table) {
             $table->id();
-            $table->string('flight_code');
-            $table->string('class');
-            $table->string('from');
-            $table->string('to');
-            $table->dateTime('departure');
-            $table->dateTime('arrival');
-            $table->string('price');
             $table->timestamps();
         });
     }
