@@ -11,6 +11,5 @@ class RentalController extends Controller
     {
         $rental = ModelsRental::all();
         return response()->json($rental);
-
     }
 }

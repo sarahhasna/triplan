@@ -14,10 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Authentication
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 //Flight
 Route::get('/flight', 'App\Http\Controllers\FlightController@all');
@@ -30,3 +26,12 @@ Route::get('/hotel', 'App\Http\Controllers\HotelController@all');
 
 //Rental
 Route::get('/rental', 'App\Http\Controllers\RentalController@all');
+
+
+Route::post('/login', 'App\Http\Controllers\UserController@login');
+Route::post('/register', 'App\Http\Controllers\UserController@register');
+
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::get('user/detail', 'App\Http\Controllers\UserController@details');
+    Route::post('logout', 'App\Http\Controllers\UserController@logout');
+}); 
