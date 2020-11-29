@@ -27,7 +27,16 @@ Route::get('/hotel', 'App\Http\Controllers\HotelController@all');
 //Rental
 Route::get('/rental', 'App\Http\Controllers\RentalController@all');
 
+//Cities
+Route::get('/cities', 'App\Http\Controllers\CitiesController@all');
 
+//Packages
+Route::get('/packages', 'App\Http\Controllers\PackagesController@all');
+
+//Thingstodos
+Route::get('/thingstodo', 'App\Http\Controllers\ThingstodoController@all');
+
+//Auth
 Route::post('/login', 'App\Http\Controllers\UserController@login');
 Route::post('/register', 'App\Http\Controllers\UserController@register');
 
