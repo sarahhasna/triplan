@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class cities extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    public function thingstodos(){
+        $this->hasMany(thingstodo::class);
+    }
+    public function countTodos()
+    {
+        return $this->hasMany(thingstodo::class, 'Cities', 'idCities');
+    }
 }

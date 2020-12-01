@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class thingstodo extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    //protected $fillable = ['name'];
+
+    public function packages(){
+        return $this->belongsToMany(packages::class);
+    }
 }

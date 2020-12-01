@@ -29,9 +29,14 @@ Route::get('/rental', 'App\Http\Controllers\RentalController@all');
 
 //Cities
 Route::get('/cities', 'App\Http\Controllers\CitiesController@all');
+Route::get('/indexcities', 'App\Http\Controllers\CitiesController@index');
+
 
 //Packages
 Route::get('/packages', 'App\Http\Controllers\PackagesController@all');
+Route::post('/packages', 'App\Http\Controllers\PackagesController@create');
+Route::get('/choosen', 'App\Http\Controllers\PackagesController@choosen');
+Route::get('/index', 'App\Http\Controllers\PackagesController@index'); //show things to do
 
 //Thingstodos
 Route::get('/thingstodo', 'App\Http\Controllers\ThingstodoController@all');

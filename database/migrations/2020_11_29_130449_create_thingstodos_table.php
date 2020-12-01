@@ -14,11 +14,15 @@ class CreateThingstodosTable extends Migration
     public function up()
     {
         Schema::create('thingstodos', function (Blueprint $table) {
-            $table->id();
+            $table->bigInteger('idThings')->primary();
+            $table->bigInteger('Cities')->unsigned();
+            $table->bigInteger('Packages')->unsigned();
             $table->string('name');
             $table->longtext('desc');
             $table->string('operational_time');
             $table->bigInteger('price');
+            //$table->foreign('Cities')->references('idCities')->on('cities');
+            //$table->foreign('Packages')->references('idPackages')->on('thingstodos');
             //$table->binary('image');
             $table->timestamps();
         });
