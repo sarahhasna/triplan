@@ -19,7 +19,7 @@ class CreateRentalsTable extends Migration
             $table->string('type');
             $table->boolean('with_driver');
             $table->integer('passenger');
-            $table->string('price');
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }

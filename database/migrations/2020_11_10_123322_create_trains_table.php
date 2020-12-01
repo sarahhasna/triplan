@@ -19,8 +19,8 @@ class CreateTrainsTable extends Migration
             $table->string('class');
             $table->string('from');
             $table->string('to');
-            $table->dateTime('departure');
-            $table->dateTime('arrival');
+            $table->date('departure');
+            $table->date('arrival');
             $table->string('price');
             $table->timestamps();
         });

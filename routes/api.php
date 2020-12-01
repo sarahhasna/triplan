@@ -17,15 +17,19 @@ use Illuminate\Support\Facades\Route;
 
 //Flight
 Route::get('/flight', 'App\Http\Controllers\FlightController@all');
+Route::post('/proses_flight', 'App\Http\Controllers\FlightController@proses');
 
 //Train
 Route::get('/train', 'App\Http\Controllers\TrainController@all');
+Route::post('/proses_train', 'App\Http\Controllers\TrainController@proses');
 
 //Hotel
 Route::get('/hotel', 'App\Http\Controllers\HotelController@all');
+Route::post('/proses_hotel', 'App\Http\Controllers\HotelController@proses');
 
 //Rental
 Route::get('/rental', 'App\Http\Controllers\RentalController@all');
+Route::post('/proses_rental', 'App\Http\Controllers\RentalController@proses');
 
 //Cities
 Route::get('/cities', 'App\Http\Controllers\CitiesController@all');

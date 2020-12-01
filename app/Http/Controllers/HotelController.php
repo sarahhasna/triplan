@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hotel as ModelsHotel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HotelController extends Controller
@@ -13,4 +14,17 @@ class HotelController extends Controller
         return response()->json($hotel);
 
     }
+
+    public function proses(Request $request)
+    {
+        $loc = $request->input('location');
+        $price = $request->input('price');
+        $hotel = DB::table('hotels')
+                    ->where('location', '=',$loc)
+                    ->Where('price','<=',$price)
+                    ->select('hotels.*')
+                    ->get();
+        return response()->json($hotel);
+    }
+    
 }

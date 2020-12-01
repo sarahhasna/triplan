@@ -19,7 +19,7 @@ class CreateHotelsTable extends Migration
             $table->longText('description');
             $table->integer('rating');
             $table->string('location');
-            $table->string('price');
+            $table->bigInteger('price');
             $table->timestamps();
         });
     }
